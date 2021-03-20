@@ -1,0 +1,27 @@
+server:
+  port: 9002
+
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:mysql://localhost:3306/jai1408
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
