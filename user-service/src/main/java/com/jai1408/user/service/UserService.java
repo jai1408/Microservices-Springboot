@@ -30,7 +30,7 @@ public class UserService {
     if (optionalUser.isPresent()) user = optionalUser.get();
     Department department =
         restTemplate.getForObject(
-            "http://127.0.0.1:9001/departments/" + user.getDepartmentId(), Department.class);
+            "http://DEPARTMENT-SERVICE/departments/" + user.getDepartmentId(), Department.class);
     responseTemplateVO.setUser(user);
     responseTemplateVO.setDepartment(department);
     return responseTemplateVO;
